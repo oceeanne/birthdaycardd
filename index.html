@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Happy Birthday My Boyfriend</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -286,7 +286,7 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border-radius: 15px;
-            font-family: cursive, -apple-system, sans-serif;
+            font-family: sans-serif;
             box-shadow: 0 6px 15px rgba(0,0,0,0.15);
             min-width: 130px;
             height: 60px;
@@ -682,10 +682,10 @@
             animation: cakePop 2s ease-in-out infinite;
         }
         
-        /* Responsive */
-        @media (max-width: 480px) {
+        /* Responsive untuk tablet */
+        @media (max-width: 768px) {
             .music-player {
-                top: 15px;
+                bottom: 15px;
                 right: 15px;
             }
             
@@ -696,58 +696,30 @@
             }
             
             .card {
-                max-width: 350px;
+                max-width: 90%;
+                margin: 20px auto;
             }
             
             .page {
                 padding: 30px 20px;
-                min-height: 550px;
-            }
-            
-            .message, .message-2, .message-3 {
-                font-size: 20px;
-            }
-            
-            .page-3 .question {
-                font-size: 24px;
-            }
-            
-            .page-3 .valentine-button {
-                padding: 14px 25px;
-                font-size: 18px;
-                min-width: 110px;
-            }
-            
-            .page-3 .heart-icon3 {
-                width: 250px;
-                height: 180px;
-            }
-            
-            .heart-icon2 {
-                width: 250px;
-                height: 180px;
-            }
-            
-            .password-digit {
-                width: 45px;
-                height: 55px;
-                font-size: 22px;
-            }
-            
-            .keypad {
-                max-width: 260px;
-            }
-            
-            .keypad-btn {
-                height: 55px;
-                font-size: 18px;
+                min-height: 500px;
             }
         }
-        
-        @media (max-width: 350px) {
+
+        /* Responsive untuk HP kecil (480px ke bawah) */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px 5px;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            
             .music-player {
-                top: 10px;
-                right: 10px;
+                position: fixed;
+                top: 15px;
+                right: 15px;
+                bottom: auto;
             }
             
             .music-btn {
@@ -757,35 +729,131 @@
             }
             
             .card {
-                max-width: 300px;
+                max-width: 100%;
+                border-radius: 10px;
+                margin: auto;
             }
             
             .page {
                 padding: 25px 15px;
-                min-height: 500px;
+                min-height: 450px;
             }
             
-            .message, .message-2, .message-3 {
-                font-size: 18px;
-            }
-            
-            .page-3 .question {
+            .message {
                 font-size: 22px;
             }
             
-            .page-3 .valentine-buttons {
-                gap: 15px;
+            .sub-message {
+                font-size: 14px;
+            }
+            
+            .tap-area {
+                width: 180px;
+                height: 45px;
+                font-size: 16px;
+            }
+            
+            .heart-icon2 {
+                width: 250px;
+                height: 180px;
+            }
+            
+            .message-2 {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            
+            .page-3 .question {
+                font-size: 24px;
             }
             
             .page-3 .valentine-button {
                 padding: 12px 20px;
                 font-size: 16px;
-                min-width: 90px;
+                min-width: 100px;
+                height: 50px;
             }
             
             .page-3 .heart-icon3 {
-                width: 200px;
-                height: 150px;
+                width: 150px;
+                height: 120px;
+            }
+            
+            .password-title {
+                font-size: 18px;
+            }
+            
+            .password-instruction {
+                font-size: 12px;
+            }
+            
+            .password-digit {
+                width: 35px;
+                height: 35px;
+                font-size: 20px;
+            }
+            
+            .keypad {
+                max-width: 250px;
+                gap: 10px;
+            }
+            
+            .keypad-btn {
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .final-message {
+                font-size: 12px;
+                max-width: 100%;
+                padding: 10px;
+                max-height: 300px;
+            }
+            
+            .signature {
+                font-size: 16px;
+            }
+            
+            .restart-btn {
+                width: 160px;
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+
+        /* Responsive untuk HP sangat kecil (350px ke bawah) */
+        @media (max-width: 350px) {
+            .card {
+                max-width: 100%;
+                border-radius: 10px;
+            }
+            
+            .page {
+                padding: 20px 10px;
+                min-height: 400px;
+            }
+            
+            .heart-icon {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .heart-photo {
+                border-radius: 12px;
+            }
+            
+            .message {
+                font-size: 20px;
+            }
+            
+            .sub-message {
+                font-size: 13px;
+            }
+            
+            .tap-area {
+                width: 160px;
+                height: 40px;
+                font-size: 15px;
             }
             
             .heart-icon2 {
@@ -793,20 +861,49 @@
                 height: 150px;
             }
             
-            .password-digit {
-                width: 40px;
-                height: 50px;
-                font-size: 20px;
+            .message-2 {
+                font-size: 13px;
             }
             
-            .keypad {
-                max-width: 240px;
+            .page-3 .question {
+                font-size: 22px;
+            }
+            
+            .page-3 .valentine-buttons {
                 gap: 10px;
             }
             
+            .page-3 .valentine-button {
+                padding: 10px 15px;
+                font-size: 14px;
+                min-width: 80px;
+                height: 45px;
+            }
+            
+            .page-3 .heart-icon3 {
+                width: 130px;
+                height: 100px;
+            }
+            
+            .password-digit {
+                width: 30px;
+                height: 30px;
+                font-size: 18px;
+            }
+            
+            .keypad {
+                max-width: 220px;
+                gap: 8px;
+            }
+            
             .keypad-btn {
-                height: 50px;
+                height: 40px;
                 font-size: 16px;
+            }
+            
+            .final-message {
+                font-size: 11px;
+                line-height: 1.4;
             }
         }
     </style>
@@ -1465,6 +1562,31 @@
             submitBtn.style.transform = '';
         });
         
+        // Handle orientation change dan resize
+        function handleResize() {
+            const card = document.querySelector('.card');
+            const isMobile = window.innerWidth <= 480;
+            
+            if (isMobile) {
+                // Adjust untuk mobile
+                document.body.style.padding = '10px';
+                if (card) {
+                    card.style.maxWidth = '95%';
+                }
+            } else {
+                // Adjust untuk desktop
+                document.body.style.padding = '20px';
+                if (card) {
+                    card.style.maxWidth = '400px';
+                }
+            }
+        }
+
+        // Panggil saat load dan resize
+        window.addEventListener('load', handleResize);
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('orientationchange', handleResize);
+
         // Handle keyboard input
         document.addEventListener('keydown', (e) => {
             if (currentPage === 4) {
